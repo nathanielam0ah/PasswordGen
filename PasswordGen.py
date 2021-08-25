@@ -6,9 +6,10 @@ capitalLts = theLetters.upper()
 spcCharacters = string.punctuation
 dgts = string.digits
 def GetLength(): # Gets the desired password length
-    length = input("Type Desired Length: ")
-    if length.isdigit(): return int(length) 
-    else: return 0
+    print("Type the Desired Length")
+    length = input(": ")
+    if length == "exit": exit()
+    return int(length) if length.isdigit() else 0
 def Generator(length=8): # Funtion to generate password based on random
     printable = f'{theLetters}{capitalLts}{dgts}{spcCharacters}'
     printable = list(printable)
@@ -25,4 +26,3 @@ while 1:
     else:
         passwd = Generator(passwd_length)
         print(f'password ({str(len(passwd))}):\t\t{passwd}')
-

@@ -364,3 +364,5 @@ FodyWeavers.xsd
 
 PasswordGen.sln
 PasswordGen.pyproj
+.gitattributes
+.gitignore
